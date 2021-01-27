@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {ReactComponent as Logo} from '../../Assets/logo.svg'
+// import {ReactComponent as Logo} from '../../Assets/logo.jpg'
+import logo from '../../Assets/logo.jpg'
 import { connect } from 'react-redux'
 import { auth } from '../../Firebase/firebase.utils'
 import { createStructuredSelector } from 'reselect'
@@ -14,7 +15,8 @@ import CartDropdown from '../Cart-dropdown/Cart-dropdown.component'
 const Header = ({currentUser , hidden}) => (
   <div className='header'>
       <Link className='logo-container' to='/'> 
-        <Logo className='logo' />
+        {/* <Logo className='logo' /> */}
+        <img src={logo} alt="Logo" className="logo"/>
       </Link>
 
       <div className='options'>
