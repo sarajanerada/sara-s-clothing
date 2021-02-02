@@ -20,7 +20,7 @@ return (
        <span className="value">{quantity}</span>
       <div className="arrow" onClick={() => addItem(cartItems)}>&#10095;</div>
     </span>
-    <span className="remove-button"  onClick={() => clearItemFromCart(cartItems)}>&#10005;</span>
+    <div className="remove-button"  onClick={() => clearItemFromCart(cartItems)}>&#10005;</div>
   </div>
 )
 }

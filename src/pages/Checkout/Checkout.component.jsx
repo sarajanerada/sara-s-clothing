@@ -5,7 +5,7 @@ import './Checkout.styles.scss'
 
 import { selectCartItem , selectCartTotal } from '../../Redux/Cart/cart.selector'
 import CheckoutItem from '../../components/Check-out/Checkout-item.component'
-import StripeButton from 'react-stripe-checkout'
+// import StripeButton from 'react-stripe-checkout'
 
 
 const CheckoutPage = ({cartItems , total}) => (
@@ -27,19 +27,20 @@ const CheckoutPage = ({cartItems , total}) => (
         <span>Remove</span>
       </div>
     </div>
+
       { cartItems.map(cartItem => 
-       <CheckoutItem cartItems={cartItem}/>
+       <CheckoutItem  key={cartItem.id} cartItems={cartItem}/>
       )}
 
     <div className="total">
-      Total : {total}
+      TOTAL : ₱ {total}
     </div>
     <div className="text-warning">
       *PLEASE USE THE FOLLOWING CARDS FOR PAYMENT*
       <br/>
       4242 4242 4242 4242 - Exp: 01/23 CVV: 123
     </div>
-    <StripeButton price={total}/>
+    {/* <StripeButton price={total}/> */}
 
   </div>
 )

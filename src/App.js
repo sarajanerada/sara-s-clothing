@@ -46,6 +46,7 @@ class App extends React.Component{
     setCurrentUser(userAuth) ; // will check the status of a user if they are Logged in or Logged out
    ;
     
+  //  addCollectionsAndDocuments('collections' , collectionsArray.map(({title , items}) => ({title , items}) )); add shop data into database
 
     }) 
   }
@@ -73,7 +74,8 @@ class App extends React.Component{
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
+  // collectionsArray: selectCollectionsForPreview - add shop data into database
 })
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
